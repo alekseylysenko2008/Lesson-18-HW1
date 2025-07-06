@@ -44,6 +44,21 @@ int main() {
     staff[4].salary = 25000;
     strcpy_s(staff[4].education, sizeof(staff[4].education), "Higher");
 
+    int current_year = 2025;
+
+    cout << "Employees older than 60 years:\n";
+    for (int i = 0; i < SIZE; i++) {
+        int age = current_year - staff[i].birth_year;
+        if (age > 60) {
+            cout << "Surname: " << staff[i].surname << endl;
+            cout << "Birth Year: " << staff[i].birth_year << endl;
+            cout << "Position: " << staff[i].position << endl;
+            cout << "Salary: " << staff[i].salary << endl;
+            cout << "Education: " << staff[i].education << endl;
+            cout << "Age: " << age << endl;
+            cout << "--------------------------\n";
+        }
+    }
 
     return 0;
 }
