@@ -1,11 +1,11 @@
 #include <iostream>
-#include <string>
+#include <cstring> 
 using namespace std;
 
 struct Employee {
-    string surname;
+    char surname[30];
     int birthYear;
-    string position;
+    char position[30];
     double salary;
-    string education;
+    char education[30];
 };
